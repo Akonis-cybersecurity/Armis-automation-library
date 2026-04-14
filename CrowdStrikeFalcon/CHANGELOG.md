@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Upgrade sekoia-automation-sdk to 1.22.5
+- Refactor CrowdStrike Falcon device and user asset handling with new Pydantic models
+- Update device and user asset connector logic to align with the new models and connector flow
 
 ## 2026-02-23 - 1.25.11
 
