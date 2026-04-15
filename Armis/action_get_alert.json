@@ -1,0 +1,20 @@
+{
+  "name": "Get Alert",
+  "description": "Retrieve full details of an Armis alert by its ID",
+  "docker_parameters": "get-armis-alert",
+  "arguments": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "alert_id": {
+        "description": "Numeric identifier of the Armis alert",
+        "type": "integer"
+      }
+    },
+    "required": ["alert_id"]
+  },
+  "results": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object"
+  }
+}

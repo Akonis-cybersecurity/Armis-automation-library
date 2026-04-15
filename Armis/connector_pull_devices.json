@@ -1,0 +1,27 @@
+{
+  "name": "Armis Devices Connector",
+  "description": "Ingest Armis Centrix devices (inventory every 24h)",
+  "docker_parameters": "pull-armis-devices",
+  "arguments": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "intake_server": {
+        "description": "Sekoia intake server URL",
+        "type": "string",
+        "default": "https://intake.sekoia.io"
+      },
+      "intake_key": {
+        "description": "Sekoia intake key",
+        "type": "string",
+        "secret": true
+      },
+      "polling_interval": {
+        "description": "Polling interval in minutes",
+        "type": "integer",
+        "default": 1440
+      }
+    },
+    "required": ["intake_key"]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Get Device",
+  "description": "Retrieve full details of an Armis device by its ID",
+  "docker_parameters": "get-armis-device",
+  "arguments": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "device_id": {
+        "description": "Numeric identifier of the Armis device",
+        "type": "integer"
+      }
+    },
+    "required": ["device_id"]
+  },
+  "results": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object"
+  }
+}

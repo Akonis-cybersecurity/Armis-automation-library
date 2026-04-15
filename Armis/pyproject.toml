@@ -1,18 +1,20 @@
 [tool.poetry]
 name = "Automation module for Armis"
-version = "0.0"
-description = ""
+version = "1.0.0"
+description = "Armis Centrix connector for Sekoia.io"
 authors = []
 package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.11"
-sekoia-automation-sdk = "^1.22.5"
+sekoia-automation-sdk = ">=1.22.4"
+requests = ">=2.31.0"
+tenacity = ">=8.2.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
 pytest-cov = "*"
-requests = "*"
+pytest-mock = "*"
 requests-mock = "*"
 
 [build-system]
@@ -21,7 +23,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 line-length = 119
-target-version = ['py38']
+target-version = ['py311']
 include = '\.pyi?$'
 
 [tool.isort]

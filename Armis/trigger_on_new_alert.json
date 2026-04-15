@@ -1,0 +1,27 @@
+{
+  "name": "On New Armis Alert",
+  "description": "Trigger a playbook run whenever a new Armis alert is detected",
+  "docker_parameters": "on-new-armis-alert",
+  "arguments": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "intake_key": {
+        "description": "Sekoia intake key",
+        "type": "string",
+        "secret": true
+      },
+      "polling_interval": {
+        "description": "Polling interval in minutes",
+        "type": "integer",
+        "default": 2
+      },
+      "min_severity": {
+        "description": "Minimum alert severity to trigger on: Low, Medium, High, Critical",
+        "type": "string",
+        "default": "High"
+      }
+    },
+    "required": ["intake_key"]
+  }
+}

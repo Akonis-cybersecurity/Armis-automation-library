@@ -1,0 +1,25 @@
+{
+  "name": "Update Alert Status",
+  "description": "Update the status of an Armis alert",
+  "docker_parameters": "update-armis-alert-status",
+  "arguments": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "alert_id": {
+        "description": "Numeric identifier of the Armis alert",
+        "type": "integer"
+      },
+      "status": {
+        "description": "New status for the alert",
+        "type": "string",
+        "enum": ["Resolved", "Suppressed", "Unhandled"]
+      }
+    },
+    "required": ["alert_id", "status"]
+  },
+  "results": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object"
+  }
+}

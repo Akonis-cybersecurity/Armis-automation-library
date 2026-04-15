@@ -1,0 +1,30 @@
+{
+  "name": "Tag Device",
+  "description": "Add tags to an Armis device",
+  "docker_parameters": "tag-armis-device",
+  "arguments": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "device_id": {
+        "description": "Numeric identifier of the Armis device",
+        "type": "integer"
+      },
+      "tags": {
+        "description": "List of tags to add to the device",
+        "type": "array",
+        "items": { "type": "string" }
+      }
+    },
+    "required": ["device_id", "tags"]
+  },
+  "results": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "success": { "type": "boolean" },
+      "device_id": { "type": "integer" },
+      "tags": { "type": "array", "items": { "type": "string" } }
+    }
+  }
+}
