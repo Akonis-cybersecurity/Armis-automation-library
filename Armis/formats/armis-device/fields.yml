@@ -1,0 +1,77 @@
+# Champs Armis sans équivalent ECS
+- name: armis.device.first_seen
+  type: date
+  description: First detection timestamp — no direct ECS equivalent
+
+- name: armis.device.category
+  type: keyword
+  description: Device category (OT Device, IP Camera, etc.) — no ECS equivalent
+
+- name: armis.device.business_impact
+  type: keyword
+  description: Business impact level (High, Medium, Low) — Armis-specific
+
+- name: armis.device.purdue_level
+  type: integer
+  description: ICS/OT Purdue model level 0-5 — OT-specific, no ECS equivalent
+
+# Champs ECS natifs (mappés depuis les champs Armis)
+- name: host.id
+  type: keyword
+  description: "Armis id"
+
+- name: host.name
+  type: keyword
+  description: "Armis name"
+
+- name: host.hostname
+  type: keyword
+  description: "Armis displayTitle"
+
+- name: host.ip
+  type: ip
+  description: "Armis ipAddress"
+
+- name: host.mac
+  type: keyword
+  description: "Armis macAddress"
+
+- name: host.type
+  type: keyword
+  description: "Armis type"
+
+- name: host.os.name
+  type: keyword
+  description: "Armis operatingSystem"
+
+- name: host.os.version
+  type: keyword
+  description: "Armis operatingSystemVersion"
+
+- name: event.risk_score
+  type: float
+  description: "Armis riskLevel (0-100)"
+
+- name: network.type
+  type: keyword
+  description: "Armis boundaries (Corporate, Guest, OT Network...)"
+
+- name: observer.vendor
+  type: keyword
+  description: "Armis manufacturer"
+
+- name: observer.product
+  type: keyword
+  description: "Armis model"
+
+- name: "@timestamp"
+  type: date
+  description: "Armis lastSeen"
+
+- name: event.kind
+  type: keyword
+  description: "Always: asset"
+
+- name: event.category
+  type: keyword
+  description: "Always: host"

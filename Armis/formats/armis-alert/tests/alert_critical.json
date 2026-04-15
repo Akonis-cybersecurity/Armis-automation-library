@@ -1,0 +1,14 @@
+{
+  "alertId": "61",
+  "title": "[Risk] Device Susceptible to Ransomware",
+  "description": "The Armis security platform has detected a violation of a policy and generated an alert.",
+  "severity": "Critical",
+  "status": "Unhandled",
+  "statusChangeTime": "2026-04-15T10:00:00.000Z",
+  "type": "System Policy Violation",
+  "classification": "Security - Other",
+  "time": "2026-04-15T10:00:00.000Z",
+  "deviceIds": ["854"],
+  "activityUUIDs": ["6f3d6d3a-6732-44cc-9d63-10a38277fb15"],
+  "affectedDevicesCount": 1
+}

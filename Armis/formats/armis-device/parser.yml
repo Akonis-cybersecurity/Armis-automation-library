@@ -1,0 +1,52 @@
+name: armis-device
+pipeline:
+  - name: json_event
+    external:
+      name: json.parse-json
+
+  - name: set_ecs_fields
+    translator:
+      - from: '{{json_event.message.id}}'
+        to: host.id
+      - from: '{{json_event.message.name}}'
+        to: host.name
+      - from: '{{json_event.message.displayTitle}}'
+        to: host.hostname
+      - from: '{{json_event.message.ipAddress}}'
+        to: host.ip
+      - from: '{{json_event.message.macAddress}}'
+        to: host.mac
+      - from: '{{json_event.message.type}}'
+        to: host.type
+      - from: '{{json_event.message.operatingSystem}}'
+        to: host.os.name
+      - from: '{{json_event.message.operatingSystemVersion}}'
+        to: host.os.version
+      - from: '{{json_event.message.riskLevel}}'
+        to: event.risk_score
+      - from: '{{json_event.message.boundaries}}'
+        to: network.type
+      - from: '{{json_event.message.manufacturer}}'
+        to: observer.vendor
+      - from: '{{json_event.message.model}}'
+        to: observer.product
+      - from: '{{json_event.message.lastSeen}}'
+        to: "@timestamp"
+
+  - name: set_armis_fields
+    translator:
+      - from: '{{json_event.message.firstSeen}}'
+        to: armis.device.first_seen
+      - from: '{{json_event.message.category}}'
+        to: armis.device.category
+      - from: '{{json_event.message.businessImpact}}'
+        to: armis.device.business_impact
+      - from: '{{json_event.message.purdueLevel}}'
+        to: armis.device.purdue_level
+
+  - name: set_static_fields
+    set:
+      - target: event.kind
+        value: asset
+      - target: event.category
+        value: host

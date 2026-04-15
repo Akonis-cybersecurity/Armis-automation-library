@@ -1,0 +1,65 @@
+# Champ Armis sans équivalent ECS
+- name: armis.alert.activity_uuids
+  type: keyword
+  description: List of related activity UUIDs — no ECS equivalent
+
+# Champs ECS natifs (mappés depuis les champs Armis)
+- name: event.id
+  type: keyword
+  description: "Armis alertId"
+
+- name: "@timestamp"
+  type: date
+  description: "Armis time — alert creation timestamp"
+
+- name: event.start
+  type: date
+  description: "Armis time — alert creation timestamp"
+
+- name: event.end
+  type: date
+  description: "Armis statusChangeTime"
+
+- name: event.action
+  type: keyword
+  description: "Armis type — e.g. System Policy Violation"
+
+- name: event.category
+  type: keyword
+  description: "Armis classification — e.g. Security - Other"
+
+- name: event.severity
+  type: long
+  description: "Numeric severity derived from Armis severity: Critical=4, High=3, Medium=2, Low=1"
+
+- name: event.outcome
+  type: keyword
+  description: "Armis status — Unhandled, Resolved, Suppressed"
+
+- name: event.count
+  type: long
+  description: "Armis affectedDevicesCount"
+
+- name: event.kind
+  type: keyword
+  description: "Always: alert"
+
+- name: rule.name
+  type: keyword
+  description: "Armis title"
+
+- name: message
+  type: text
+  description: "Armis description"
+
+- name: host.id
+  type: keyword
+  description: "Armis deviceIds"
+
+- name: observer.vendor
+  type: keyword
+  description: "Always: Armis"
+
+- name: observer.product
+  type: keyword
+  description: "Always: Centrix"

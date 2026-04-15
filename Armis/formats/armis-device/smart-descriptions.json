@@ -1,0 +1,22 @@
+[
+  {
+    "value": "Armis device '{host.name}' — {armis.device.category} — risk score {event.risk_score}/100",
+    "conditions": [
+      {"field": "host.name", "type": "exist"},
+      {"field": "event.risk_score", "type": "exist"}
+    ]
+  },
+  {
+    "value": "Armis device '{host.name}' — {host.os.name} {host.os.version}",
+    "conditions": [
+      {"field": "host.name", "type": "exist"},
+      {"field": "host.os.name", "type": "exist"}
+    ]
+  },
+  {
+    "value": "Armis device {host.id}",
+    "conditions": [
+      {"field": "host.id", "type": "exist"}
+    ]
+  }
+]

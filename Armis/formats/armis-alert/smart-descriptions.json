@@ -1,0 +1,22 @@
+[
+  {
+    "value": "Armis alert '{rule.name}' — severity {event.severity} — {event.outcome}",
+    "conditions": [
+      {"field": "rule.name", "type": "exist"},
+      {"field": "event.severity", "type": "exist"}
+    ]
+  },
+  {
+    "value": "Armis alert {event.id} — {event.action}",
+    "conditions": [
+      {"field": "event.id", "type": "exist"},
+      {"field": "event.action", "type": "exist"}
+    ]
+  },
+  {
+    "value": "Armis alert {event.id}",
+    "conditions": [
+      {"field": "event.id", "type": "exist"}
+    ]
+  }
+]

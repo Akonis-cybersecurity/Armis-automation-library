@@ -1,0 +1,20 @@
+{
+  "id": "1154",
+  "name": "PLC-FACTORY-01",
+  "names": ["PLC-FACTORY-01"],
+  "displayTitle": "PLC-FACTORY-01",
+  "ipAddress": ["192.168.1.50"],
+  "macAddress": ["50:76:AF:D3:3F:AB"],
+  "type": "PLC",
+  "category": "OT Device",
+  "operatingSystem": "Windows",
+  "operatingSystemVersion": "Embedded 7",
+  "manufacturer": "Siemens",
+  "model": "S7-300",
+  "firstSeen": "2024-10-09T05:09:02.000Z",
+  "lastSeen": "2026-04-15T10:00:00.000Z",
+  "riskLevel": 87,
+  "boundaries": "OT Network",
+  "businessImpact": "High",
+  "purdueLevel": 1
+}
