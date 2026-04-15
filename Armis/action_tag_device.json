@@ -1,4 +1,5 @@
 {
+  "uuid": "f59101fd-a0ef-4bb1-8f3f-107c0debbed3",
   "name": "Tag Device",
   "description": "Add tags to an Armis device",
   "docker_parameters": "tag-armis-device",

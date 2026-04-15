@@ -1,4 +1,5 @@
 {
+  "uuid": "c22c2542-84af-4b06-a82d-4266704030b5",
   "name": "Armis Devices Connector",
   "description": "Ingest Armis Centrix devices (inventory every 24h)",
   "docker_parameters": "pull-armis-devices",

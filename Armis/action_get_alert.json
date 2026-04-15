@@ -1,4 +1,5 @@
 {
+  "uuid": "35eca91a-0aae-4992-90cb-bbaa04ffa0ac",
   "name": "Get Alert",
   "description": "Retrieve full details of an Armis alert by its ID",
   "docker_parameters": "get-armis-alert",

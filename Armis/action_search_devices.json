@@ -1,4 +1,5 @@
 {
+  "uuid": "9714870b-d6cf-40c5-a9c0-c1d0d1aac3c4",
   "name": "Search Devices",
   "description": "Search Armis devices using an ASQ query",
   "docker_parameters": "search-armis-devices",

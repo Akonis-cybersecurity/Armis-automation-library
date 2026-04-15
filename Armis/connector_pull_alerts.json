@@ -1,4 +1,5 @@
 {
+  "uuid": "aa8963c5-6767-4a75-a882-f55f5aff7785",
   "name": "Armis Alerts Connector",
   "description": "Ingest Armis Centrix alerts in real time",
   "docker_parameters": "pull-armis-alerts",

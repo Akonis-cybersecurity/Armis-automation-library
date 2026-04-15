@@ -1,4 +1,5 @@
 {
+  "uuid": "b6751d32-1ff0-46fa-a788-d4fa77ad89de",
   "name": "Update Alert Status",
   "description": "Update the status of an Armis alert",
   "docker_parameters": "update-armis-alert-status",

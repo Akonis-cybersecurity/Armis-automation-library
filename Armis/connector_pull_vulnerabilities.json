@@ -1,4 +1,5 @@
 {
+  "uuid": "d514117d-575d-411d-9d17-0828ece2725b",
   "name": "Armis Vulnerabilities Connector",
   "description": "Ingest Armis Centrix vulnerabilities (every 24h)",
   "docker_parameters": "pull-armis-vulnerabilities",
